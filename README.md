@@ -74,7 +74,7 @@ df
 ```
 <img width="1713" height="617" alt="Screenshot 2025-09-13 104332" src="https://github.com/user-attachments/assets/11c52395-4c58-4dbf-8769-8bf0781da199" />
 
-
+```
 df.nunique()
 ```
 
