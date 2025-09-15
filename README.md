@@ -1,9 +1,9 @@
 # EXNO2DS
 # AIM:
-      To perform Exploratory Data Analysis on the given data set.
+To perform Exploratory Data Analysis on the given data set.
       
 # EXPLANATION:
-  The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
+The primary aim with exploratory analysis is to examine the data for distribution, outliers and anomalies to direct specific testing of your hypothesis.
   
 # ALGORITHM:
 STEP 1: Import the required packages to perform Data Cleansing,Removing Outliers and Exploratory Data Analysis.
@@ -26,7 +26,6 @@ STEP 8: Use heatmap method of representation to show relationships between two v
 ```
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 import seaborn as sns
 df=pd.read_csv("/content/titanic_dataset.csv")
 df
@@ -40,7 +39,7 @@ df.info()
 <img width="1647" height="497" alt="Screenshot 2025-09-13 104248" src="https://github.com/user-attachments/assets/d3f26fb9-d532-44ae-b963-4c729b4fac85" />
 
 ```
-df.descripe()
+df.describe()
 ```
 
 <img width="1666" height="432" alt="Screenshot 2025-09-13 104255" src="https://github.com/user-attachments/assets/2efb7216-8467-4280-8b7b-aba8aca8ea42" />
@@ -56,12 +55,6 @@ df.dtypes
 df.shape
 ```
 <img width="973" height="129" alt="Screenshot 2025-09-13 110545" src="https://github.com/user-attachments/assets/0a57d4bb-ec99-4da6-93b1-536077b8f017" />
-
-```
-df.value_counts()
-```
-
-<img width="1423" height="579" alt="Screenshot 2025-09-13 110601" src="https://github.com/user-attachments/assets/ce8a968f-546d-4f19-bd87-b685143be3e2" />
 
 ```
 df['Age'].value_counts()
@@ -81,10 +74,10 @@ df.nunique()
 <img width="1645" height="513" alt="Screenshot 2025-09-13 105652" src="https://github.com/user-attachments/assets/1fa3a6de-cb01-4cae-bb4a-124136efa7dc" />
 
 ```
-sns.countplot(data=df,x='Survived')
+sns.countplot(data=df,x='Age')
 ```
 
-<img width="1607" height="575" alt="Screenshot 2025-09-13 105725" src="https://github.com/user-attachments/assets/b7943688-49f2-43d7-b2ae-5dcc9a9b1e3d" />
+![WhatsApp Image 2025-09-15 at 11 41 51_a3c91d40](https://github.com/user-attachments/assets/53eae105-af28-4592-93c3-0fd5eaa60785)
 
 ```
 df.rename(columns={'Sex':'Gender'},inplace=True)
@@ -112,20 +105,12 @@ sns.scatterplot(x=df["Age"],y=df["Fare"])
 <img width="1382" height="547" alt="Screenshot 2025-09-13 112505" src="https://github.com/user-attachments/assets/eacf4995-5c6e-44d5-aed2-9f54acf80b1f" />
 
 ```
-fig, axl=plt.subplots(figsize=(8,5))
-plt=sns.boxplot(ax=axl,x='Pclass',y='Age',hue='Gender',data=df)
-```
-
-<img width="1368" height="576" alt="Screenshot 2025-09-13 112515" src="https://github.com/user-attachments/assets/d5278d05-ae53-4d89-a8ab-bf3fde4a4664" />
-
-```
 plt=sns.boxplot(x='Pclass',y='Age',hue='Gender',data=df)
 ```
 
 <img width="1380" height="539" alt="Screenshot 2025-09-13 112523" src="https://github.com/user-attachments/assets/aaae6d20-85c2-4377-8027-72947105b8c9" />
 
 ```
-import seaborn as sns
 sns.catplot(x='Pclass',y="Age",hue="Gender",col="Survived",kind="box",data=df)
 ```
 
@@ -144,13 +129,7 @@ sns.heatmap(corr,annot=True)
 
 <img width="1274" height="514" alt="Screenshot 2025-09-13 114333" src="https://github.com/user-attachments/assets/0f9884c1-30c2-4bd1-911a-34372f36a1af" />
 
-```
-corr=df.select_dtypes(include=np.number).corr()
-sns.heatmap(corr,annot=True)
-```
-
-<img width="1267" height="533" alt="Screenshot 2025-09-13 114343" src="https://github.com/user-attachments/assets/fbc563b6-a79e-495a-96b6-1b63366a4494" />
 
         
 # RESULT
-        <<INCLUDE YOUR RESULT HERE>>
+Thus the program is executed successfully..!
