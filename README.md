@@ -117,12 +117,6 @@ sns.catplot(x='Pclass',y="Age",hue="Gender",col="Survived",kind="box",data=df)
 <img width="1264" height="598" alt="Screenshot 2025-09-13 114305" src="https://github.com/user-attachments/assets/2c1ea789-b3ac-49b0-bc1b-b8ab2e008b2f" />
 
 ```
-sns.catplot(data=df,col="Survived",x="Gender",hue='Pclass',kind="count")
-```
-
-<img width="1265" height="610" alt="Screenshot 2025-09-13 114325" src="https://github.com/user-attachments/assets/10b03a6d-27af-4eb2-8999-d8c0da04b5e9" />
-
-```
 corr=df.corr(numeric_only=True)
 sns.heatmap(corr,annot=True)
 ```
