@@ -54,7 +54,7 @@ df.dtypes
 ```
 df.shape
 ```
-<img width="973" height="129" alt="Screenshot 2025-09-13 110545" src="https://github.com/user-attachments/assets/0a57d4bb-ec99-4da6-93b1-536077b8f017" />
+![WhatsApp Image 2025-09-15 at 11 50 01_9268a092](https://github.com/user-attachments/assets/afebf05c-2d9b-4713-94b6-d519f188e20e)
 
 ```
 df['Age'].value_counts()
